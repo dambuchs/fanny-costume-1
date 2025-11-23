@@ -1,166 +1,90 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
-import _ from "lodash";
-
-import {
-  FaArrowRight,
-  FaGithub,
-  FaCodepen,
-  FaLinkedin,
-  FaDribbble,
-} from "react-icons/fa6";
-
+import React from "react";
+import { FaArrowDown, FaScissors, FaPenRuler } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
-import Avatar from "@/components/avatar";
 import ContactDialog from "@/components/layout/contact-dialog";
-import AnimatedIcon from "@/components/floating-icon";
-import ReactIcon from "@/components/icons/react";
-import NodeIcon from "@/components/icons/node";
-import ExpressIcon from "@/components/icons/express";
-import TailwindIcon from "@/components/icons/tailwind";
-import BulmaIcon from "@/components/icons/bulma";
-import BootstrapIcon from "@/components/icons/bootstrap";
+import StitchLine from "@/components/ui/stitch-line";
 
 const Hero = () => {
-  const [randomIcons, setRandomIcons] = useState([null, null, null]);
-  const icons = [
-    ReactIcon,
-    ExpressIcon,
-    NodeIcon,
-    TailwindIcon,
-    BulmaIcon,
-    BootstrapIcon,
-  ];
-
-  useEffect(() => {
-    const selectedIcons = _.sampleSize(icons, 3);
-    setRandomIcons(selectedIcons);
-  }, []);
-
-  if (randomIcons.includes(null)) {
-    return null;
-  }
-
   return (
-    <div className="mx-auto flex flex-col gap-10 md:w-[1100px]">
-      <div className="flex flex-col justify-center gap-10 md:flex-row md:justify-between">
-        <div className="order-last md:order-1 md:w-[500px]">
-          <div className="mb-6 flex flex-col text-center md:text-start">
-            <h1 className="text-4xl font-bold">Ralph Ortiz</h1>
-            <code className="pb-4 pt-1 text-lg font-semibold">
-              Full Stack Engineer
-            </code>
-            <p>
-              I am passionate about integrating functionality and design in
-              applications to create intuitive, user-friendly experiences.
-            </p>
+    <section id="hero" className="flex min-h-[85vh] flex-col justify-center py-10 relative overflow-hidden">
+      {/* Background Elements */}
+      <div className="absolute right-0 top-20 -z-10 opacity-5">
+         <FaScissors size={300} />
+      </div>
+      <div className="absolute left-10 bottom-20 -z-10 opacity-5 rotate-45">
+         <FaPenRuler size={200} />
+      </div>
+
+      <div className="mx-auto flex flex-col items-center gap-12 text-center md:w-[1100px] md:flex-row md:text-start">
+        
+        {/* Text Content */}
+        <div className="flex-1 space-y-8 relative">
+          {/* Decorative stitch above title */}
+          <div className="w-24 h-1 bg-primary/20 mx-auto md:mx-0 mb-4"></div>
+
+          <h1 className="font-cera text-6xl font-bold leading-tight tracking-tight md:text-8xl text-primary">
+            Fanny<br/>Costume
+          </h1>
+          <div className="flex items-center justify-center gap-4 md:justify-start text-secondary font-bold tracking-widest uppercase text-sm">
+            <span>Design</span>
+            <span className="h-1 w-1 rounded-full bg-primary"></span>
+            <span>Fabrication</span>
+            <span className="h-1 w-1 rounded-full bg-primary"></span>
+            <span>Artistry</span>
           </div>
-          <div className="flex flex-col space-y-4 md:flex-row md:space-x-4 md:space-y-0">
+
+          <p className="max-w-lg text-lg leading-relaxed text-muted-foreground md:mx-0 font-serif italic">
+            "Clothes make the man. Naked people have little or no influence on society."
+          </p>
+          <p className="max-w-lg text-base text-muted-foreground md:mx-0">
+             Specializing in historical accuracy and avant-garde theatrical costume design. Bringing characters to life from sketch to stage.
+          </p>
+          
+          <div className="flex flex-col justify-center gap-4 pt-4 md:flex-row md:justify-start">
             <ContactDialog />
-            <a href="https://calendly.com/ralphortiz/30min" target="_blank">
-              <Button size="lg" className="w-full">
-                Schedule a meeting <FaArrowRight className="ml-2" size="14px" />
+            <a href="#work">
+              <Button variant="ghost" size="lg" className="border-2 border-dashed border-primary/30 hover:border-primary hover:bg-primary/5">
+                View Portfolio
               </Button>
             </a>
           </div>
-          <div className="mt-10 flex justify-center space-x-5 md:justify-start">
-            <a href="https://github.com/rcortiz" target="_blank">
-              <FaGithub size="24px" className="opacity-60 hover:opacity-100" />
-            </a>
-            <a href="https://codepen.io/rcortiz" target="_blank">
-              <FaCodepen size="24px" className="opacity-60 hover:opacity-100" />
-            </a>
-            <a href="https://www.linkedin.com/in/ralphortiz/" target="_blank">
-              <FaLinkedin
-                size="24px"
-                className="opacity-60 hover:opacity-100"
+        </div>
+
+        {/* Image Content */}
+        <div className="relative flex-1 flex justify-center md:justify-end mt-10 md:mt-0">
+          <div className="relative h-[450px] w-[350px] md:h-[550px] md:w-[420px]">
+            {/* Frame Layers */}
+            <div className="absolute inset-0 border-2 border-primary/20 translate-x-4 translate-y-4"></div>
+            <div className="absolute inset-0 border-2 border-dashed border-secondary translate-x-2 translate-y-2"></div>
+            
+            {/* Main Image Container */}
+            <div className="relative h-full w-full overflow-hidden bg-muted shadow-xl">
+               <img 
+                src="https://placehold.co/420x550/800000/FFF?text=Fanny+Portrait" 
+                alt="Fanny Costume Designer"
+                className="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-700 hover:scale-105 transform"
               />
-            </a>
-            <a href="https://dribbble.com/_rcortiz" target="_blank">
-              <FaDribbble
-                size="24px"
-                className="opacity-60 hover:opacity-100"
-              />
-            </a>
+              {/* Overlay Texture */}
+              <div className="absolute inset-0 bg-gradient-to-t from-background/80 to-transparent opacity-60 pointer-events-none"></div>
+            </div>
+            
+            {/* Floating Detail */}
+            <div className="absolute -bottom-6 -left-6 bg-background p-4 shadow-lg border border-dashed border-primary/30 max-w-[150px]">
+                <p className="font-cera text-xs text-primary uppercase tracking-wider">Latest Production</p>
+                <p className="text-sm font-bold">Macbeth, 2024</p>
+            </div>
           </div>
         </div>
-        <div className="relative order-1 mx-auto md:order-last">
-          <Avatar />
-          <AnimatedIcon
-            IconComponent={randomIcons[0]}
-            className="-right-6 -top-4 h-8 w-8"
-            animateProps={{ y: [0, -10, 0] }}
-            transitionProps={{
-              duration: 3,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          />
-          <AnimatedIcon
-            IconComponent={randomIcons[1]}
-            className="-left-5 top-12 h-10 w-10"
-            animateProps={{ y: [0, 10, 0] }}
-            transitionProps={{
-              duration: 2.5,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          />
-          <AnimatedIcon
-            IconComponent={randomIcons[2]}
-            className="-right-8 bottom-8 h-12 w-12"
-            animateProps={{ y: [0, -8, 0] }}
-            transitionProps={{
-              duration: 2,
-              repeat: Infinity,
-              repeatType: "loop",
-            }}
-          />
-        </div>
       </div>
-      <div className="space-y-6">
-        <div>
-          <h5 className="mb-4 font-cera text-lg font-medium">About Me</h5>
-          <p className="mb-4 text-primary/75">
-            I&rsquo;m a software engineer passionate about creating seamless,
-            high-performance user interfaces that blend thoughtful design with
-            strong engineering principles. I enjoy working at the intersection
-            of design and development, ensuring that the experiences I build are
-            not only visually compelling but also highly usable and efficient.
-          </p>
-          <p className="mb-4 text-primary/75">
-            Currently, I&rsquo;m a Software Developer at{" "}
-            <a
-              href="https://www.gmanmi.com/"
-              target="_blank"
-              className="font-medium text-[#EE4865] hover:underline dark:text-[#FFAB00]"
-            >
-              GMA New Media Inc.
-            </a>
-            , where I contribute to the design, development, and maintenance of
-            web applications, ensuring they meet performance, usability, and
-            scalability standards. I collaborate with cross-functional teams to
-            implement new features, troubleshoot issues, and enhance existing
-            systems.
-          </p>
-          <p className="mb-4 text-primary/75">
-            In the past, I&rsquo;ve had the opportunity to work in diverse
-            environments, from large corporations to start-ups, and have gained
-            valuable experience in managing group systems, APIs, and integrating
-            modern technologies like ReactJS and Node.js. Additionally, I enjoy
-            creating personal projects that explore different aspects of web
-            development.
-          </p>
-          <p className="mb-4 text-primary/75">
-            Outside of work, I&rsquo;m usually at the gym, playing video games,
-            reading, or watching TV series and documentaries. Traveling is
-            another one of my passions, and I&rsquo;m always looking for new
-            adventures.
-          </p>
-        </div>
+
+      {/* Scroll Indicator */}
+      <div className="mt-16 flex flex-col items-center justify-center opacity-40 animate-bounce gap-2">
+        <span className="text-xs uppercase tracking-widest">Scroll</span>
+        <div className="h-12 w-[1px] bg-primary"></div>
       </div>
-    </div>
+    </section>
   );
 };
 

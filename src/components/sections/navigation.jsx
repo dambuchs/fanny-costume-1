@@ -66,15 +66,6 @@ const NavigationBar = () => {
                   </li>
                 );
               })}
-              <Button>
-                <a
-                  href="/Ralph Ortiz - Full Stack Engineer.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Resume</span>
-                </a>
-              </Button>
             </ul>
           </div>
           <Button
@@ -118,15 +109,6 @@ const NavigationBar = () => {
                   </li>
                 );
               })}
-              <Button>
-                <a
-                  href="/Ralph Ortiz - Full Stack Engineer.pdf"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <span>Resume</span>
-                </a>
-              </Button>
             </ul>
           </motion.nav>
         )}

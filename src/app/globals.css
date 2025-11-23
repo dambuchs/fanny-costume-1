@@ -30,67 +30,70 @@ code {
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 0 0% 3.9%;
+    /* Warm Cream/Paper Background */
+    --background: 40 20% 98%;
+    --foreground: 0 0% 17%;
 
     --card: 0 0% 100%;
-    --card-foreground: 0 0% 3.9%;
+    --card-foreground: 0 0% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 0 0% 3.9%;
+    --popover-foreground: 0 0% 17%;
 
-    --primary: 0 0% 9%;
-    --primary-foreground: 0 0% 98%;
+    /* Theater Red */
+    --primary: 0 59% 41%;
+    --primary-foreground: 40 20% 98%;
 
-    --secondary: 0 0% 96.1%;
-    --secondary-foreground: 0 0% 9%;
+    /* Gold/Brass */
+    --secondary: 46 65% 52%;
+    --secondary-foreground: 0 0% 17%;
 
-    --muted: 0 0% 96.1%;
-    --muted-foreground: 0 0% 45.1%;
+    --muted: 40 20% 92%;
+    --muted-foreground: 0 0% 45%;
 
-    --accent: 0 0% 96.1%;
-    --accent-foreground: 0 0% 9%;
+    --accent: 40 60% 90%;
+    --accent-foreground: 0 59% 41%;
 
     --destructive: 0 84.2% 60.2%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 40 20% 98%;
 
-    --border: 0 0% 89.8%;
-    --input: 0 0% 89.8%;
-    --ring: 0 0% 3.9%;
+    --border: 40 20% 85%;
+    --input: 40 20% 85%;
+    --ring: 0 59% 41%;
 
     --radius: 0.5rem;
-    --accent-text: 345 85% 60%; /* HSL equivalent of #EE4865 */
   }
 
   .dark {
-    --background: 0 0% 3.9%;
-    --foreground: 0 0% 98%;
+    /* Backstage Dark */
+    --background: 0 0% 10%;
+    --foreground: 40 20% 98%;
 
-    --card: 0 0% 3.9%;
-    --card-foreground: 0 0% 98%;
+    --card: 0 0% 13%;
+    --card-foreground: 40 20% 98%;
 
-    --popover: 0 0% 3.9%;
-    --popover-foreground: 0 0% 98%;
+    --popover: 0 0% 13%;
+    --popover-foreground: 40 20% 98%;
 
-    --primary: 0 0% 98%;
-    --primary-foreground: 0 0% 9%;
+    /* Brighter Red for Dark Mode */
+    --primary: 6 58% 46%;
+    --primary-foreground: 40 20% 98%;
 
-    --secondary: 0 0% 14.9%;
-    --secondary-foreground: 0 0% 98%;
+    --secondary: 46 65% 52%;
+    --secondary-foreground: 0 0% 10%;
 
-    --muted: 0 0% 14.9%;
-    --muted-foreground: 0 0% 63.9%;
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
 
-    --accent: 0 0% 14.9%;
-    --accent-foreground: 0 0% 98%;
+    --accent: 0 0% 20%;
+    --accent-foreground: 40 20% 98%;
 
     --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 0 0% 98%;
+    --destructive-foreground: 40 20% 98%;
 
-    --border: 0 0% 14.9%;
-    --input: 0 0% 14.9%;
-    --ring: 0 0% 83.1%;
-    --accent-text: 42 100% 50%; /* HSL equivalent of #FFAB00 */
+    --border: 0 0% 20%;
+    --input: 0 0% 20%;
+    --ring: 6 58% 46%;
   }
 }
 
@@ -100,5 +103,22 @@ code {
   }
   body {
     @apply bg-background text-foreground;
+    /* Subtle texture for warmth */
+    background-image: radial-gradient(#00000005 1px, transparent 1px);
+    background-size: 20px 20px;
+  }
+  .dark body {
+    background-image: radial-gradient(#ffffff05 1px, transparent 1px);
+  }
+}
+
+/* Custom Utility for Stitched Border */
+@layer utilities {
+  .border-stitch {
+    @apply border-2 border-dashed border-primary/50;
+  }
+  
+  .card-hover-effect {
+    @apply transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-secondary;
   }
 }
