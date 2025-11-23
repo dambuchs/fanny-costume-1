@@ -1,11 +1,11 @@
 export const navLinks = [
   {
     path: "#hero",
-    name: "Home",
+    name: "Accueil",
   },
   {
     path: "#work",
-    name: "Work",
+    name: "Travaux",
   },
   {
     path: "#contact",

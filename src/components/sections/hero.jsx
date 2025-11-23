@@ -17,28 +17,28 @@ const Hero = () => {
           <div className="w-24 h-1 bg-primary/20 mx-auto md:mx-0 mb-4"></div>
 
           <h1 className="font-cera text-6xl font-bold leading-tight tracking-tight md:text-8xl text-primary">
-            Fanny<br/>Costume
+            Fanny<br/>Buchs
           </h1>
           <div className="flex items-center justify-center gap-4 md:justify-start text-secondary font-bold tracking-widest uppercase text-sm">
+            <span>Costume</span>
+            <span className="h-1 w-1 rounded-full bg-primary"></span>
             <span>Design</span>
             <span className="h-1 w-1 rounded-full bg-primary"></span>
-            <span>Fabrication</span>
-            <span className="h-1 w-1 rounded-full bg-primary"></span>
-            <span>Artistry</span>
+            <span>Création</span>
           </div>
 
           <p className="max-w-lg text-lg leading-relaxed text-muted-foreground md:mx-0 font-serif italic">
-            "Clothes make the man. Naked people have little or no influence on society."
+            &quot;L&apos;habit ne fait pas le moine, mais il fait le personnage.&quot;
           </p>
           <p className="max-w-lg text-base text-muted-foreground md:mx-0">
-             Specializing in historical accuracy and avant-garde theatrical costume design. Bringing characters to life from sketch to stage.
+             Costumière basée à Lausanne, Suisse. Spécialisée dans le théâtre, la danse, le cirque et le court-métrage.
           </p>
           
           <div className="flex flex-col justify-center gap-4 pt-4 md:flex-row md:justify-start">
             <ContactDialog />
             <a href="#work">
               <Button variant="ghost" size="lg" className="border-2 border-dashed border-primary/30 hover:border-primary hover:bg-primary/5">
-                View Portfolio
+                Voir Portfolio
               </Button>
             </a>
           </div>
@@ -55,7 +55,7 @@ const Hero = () => {
             <div className="relative h-full w-full overflow-hidden bg-muted shadow-xl">
                <img 
                 src="https://placehold.co/420x550/800000/FFF?text=Fanny+Portrait" 
-                alt="Fanny Costume Designer"
+                alt="Fanny Buchs Costumière"
                 className="h-full w-full object-cover opacity-90 hover:opacity-100 transition-opacity duration-700 hover:scale-105 transform"
               />
               {/* Overlay Texture */}
@@ -64,7 +64,7 @@ const Hero = () => {
             
             {/* Floating Detail */}
             <div className="absolute -bottom-6 -left-6 bg-background p-4 shadow-lg border border-dashed border-primary/30 max-w-[150px]">
-                <p className="font-cera text-xs text-primary uppercase tracking-wider">Latest Production</p>
+                <p className="font-cera text-xs text-primary uppercase tracking-wider">Dernière Production</p>
                 <p className="text-sm font-bold">Macbeth, 2024</p>
             </div>
           </div>

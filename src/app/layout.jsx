@@ -10,25 +10,27 @@ import { inter, roboto, ceraRoundPro } from "@/utils/fonts";
 
 export const metadata = {
   title: {
-    default: "Fanny Costume",
-    template: "Fanny Costume | %s",
+    default: "Fanny Buchs | Costumière",
+    template: "Fanny Buchs | %s",
   },
   description:
-    "Theater costume designer specializing in historical accuracy and avant-garde theatrical costume design.",
+    "Costumière basée à Lausanne, Suisse. Spécialisée dans le théâtre, la danse, le cirque et le court-métrage.",
   keywords: [
-    "Costume Design",
-    "Theater",
-    "Fabrication",
-    "Historical Costume",
-    "Stage Design",
+    "Costumière",
+    "Théâtre",
+    "Danse",
+    "Cirque",
+    "Lausanne",
+    "Suisse",
+    "Design Costume",
   ],
   authors: [
     {
-      name: "Fanny Costume",
+      name: "Fanny Buchs",
       url: "https://fanny-costume.com",
     },
   ],
-  creator: "Fanny Costume",
+  creator: "Fanny Buchs",
 };
 
 export default function RootLayout({ children }) {
@@ -49,7 +51,7 @@ export default function RootLayout({ children }) {
   //   return () => window.removeEventListener("keydown", handleKeyDown);
   // }, [toggle]);
   return (
-    <html lang="en">
+    <html lang="fr">
       <body className={`${inter} ${roboto} ${ceraRoundPro}`}>
         <div className="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
           <NavigationBar />

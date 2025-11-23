@@ -23,12 +23,12 @@ const ContactForm = ({ handleOnSubmit }) => {
         <Form className="mt-4 space-y-4">
           <div className="space-y-2">
             <p htmlFor="fullname" className="text-sm font-semibold">
-              Full Name
+              Nom complet
             </p>
             <Input
               id="fullname"
               type="text"
-              placeholder="John Doe"
+              placeholder="Jean Dupont"
               name="fullname"
               value={values.fullname}
               onChange={handleChange}
@@ -47,7 +47,7 @@ const ContactForm = ({ handleOnSubmit }) => {
             <Input
               id="email"
               type="email"
-              placeholder="johndoe@gmail.com"
+              placeholder="jeandupont@gmail.com"
               name="email"
               value={values.email}
               onChange={handleChange}
@@ -61,12 +61,12 @@ const ContactForm = ({ handleOnSubmit }) => {
           </div>
           <div className="space-y-2">
             <p htmlFor="subject" className="text-sm">
-              Subject
+              Sujet
             </p>
             <Input
               id="subject"
               type="text"
-              placeholder="Enter Email Subject"
+              placeholder="Sujet de l'email"
               name="subject"
               value={values.subject}
               onChange={handleChange}
@@ -80,12 +80,12 @@ const ContactForm = ({ handleOnSubmit }) => {
           </div>
           <div className="space-y-2">
             <p htmlFor="body" className="text-sm">
-              Body
+              Message
             </p>
             <Textarea
               id="body"
               type="text"
-              placeholder="Enter Email Body"
+              placeholder="Votre message"
               name="body"
               value={values.body}
               onChange={handleChange}
@@ -99,7 +99,7 @@ const ContactForm = ({ handleOnSubmit }) => {
           </div>
           <div className="flex justify-end">
             <Button type="submit" disabled={!isValid}>
-              Submit
+              Envoyer
             </Button>
           </div>
         </Form>

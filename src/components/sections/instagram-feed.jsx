@@ -79,11 +79,11 @@ const InstagramFeed = () => {
           <FaInstagram size={28} />
         </div>
         <h2 className="text-3xl font-bold uppercase tracking-wider mb-4">
-          Follow the Process
+          Suivre le Processus
         </h2>
         <StitchLine className="max-w-[200px] mx-auto" />
         <p className="mt-6 text-muted-foreground text-lg">
-          Behind the scenes, sketches, and daily inspiration.
+          Dans les coulisses, croquis et inspiration quotidienne.
         </p>
         <Button
           variant="link"

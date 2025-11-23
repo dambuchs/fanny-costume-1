@@ -14,28 +14,28 @@ const works = [
     category: "Shakespeare",
     year: "2023",
     image: "https://placehold.co/600x400/2a2a2a/FFF?text=Hamlet+Production",
-    description: "Costume design for the 2023 production of Hamlet at the Royal Theatre. emphasizing the psychological state through fabric texture.",
+    description: "Création de costumes pour la production de Hamlet au Théâtre Royal en 2023. Mise en avant de l'état psychologique à travers la texture des tissus.",
   },
   {
-    title: "The Phantom of the Opera",
-    category: "Musical",
+    title: "Le Fantôme de l'Opéra",
+    category: "Comédie Musicale",
     year: "2022",
     image: "https://placehold.co/600x400/5a1a1a/FFF?text=Phantom+Masquerade",
-    description: "Intricate period costumes for the masquerade scene, featuring hand-embroidered details and velvet layers.",
+    description: "Costumes d'époque complexes pour la scène du bal masqué, avec des détails brodés à la main et des couches de velours.",
   },
   {
-    title: "A Midsummer Night's Dream",
-    category: "Fantasy",
+    title: "Le Songe d'une nuit d'été",
+    category: "Fantastique",
     year: "2021",
     image: "https://placehold.co/600x400/1a5a1a/FFF?text=Midsummer+Fairies",
-    description: "Ethereal and organic designs for the fairies, utilizing natural dyes and translucent silks.",
+    description: "Designs éthérés et organiques pour les fées, utilisant des teintures naturelles et des soies translucides.",
   },
   {
     title: "Les Misérables",
-    category: "Historical",
+    category: "Historique",
     year: "2020",
     image: "https://placehold.co/600x400/1a1a5a/FFF?text=Les+Mis+Barricade",
-    description: "Gritty and realistic 19th-century French costumes, heavily distressed for authenticity.",
+    description: "Costumes français du XIXe siècle réalistes et bruts, fortement patinés pour l'authenticité.",
   },
 ];
 
@@ -46,10 +46,10 @@ const Work = () => {
         <div className="flex items-center justify-center gap-2 text-primary mb-4">
             <FaMasksTheater size={24} />
         </div>
-        <h2 className="text-4xl font-bold uppercase tracking-wider mb-4">Selected Portfolio</h2>
+        <h2 className="text-4xl font-bold uppercase tracking-wider mb-4">Sélection de Projets</h2>
         <StitchLine className="max-w-[200px] mx-auto" />
         <p className="mt-6 text-muted-foreground font-serif text-lg italic">
-          "A collection of characters, fabrics, and stories told through design."
+          &quot;Une collection de personnages, de tissus et d&apos;histoires racontées par le design.&quot;
         </p>
       </div>
       
@@ -93,7 +93,7 @@ const Work = () => {
       </div>
       
       <div className="text-center mt-16">
-         <p className="text-sm text-muted-foreground">More works available upon request.</p>
+         <p className="text-sm text-muted-foreground">Plus de projets disponibles sur demande.</p>
       </div>
     </section>
   );

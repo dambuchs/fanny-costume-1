@@ -1,11 +1,11 @@
 import * as yup from "yup";
 
 export const contactFormSchema = yup.object().shape({
-  fullname: yup.string().required("This field is required"),
+  fullname: yup.string().required("Ce champ est requis"),
   email: yup
     .string()
-    .required("This field is required")
-    .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Invalid email format"),
-  subject: yup.string().required("This field is required"),
-  body: yup.string().required("This field is required"),
+    .required("Ce champ est requis")
+    .matches(/^[^\s@]+@[^\s@]+\.[^\s@]+$/, "Format d'email invalide"),
+  subject: yup.string().required("Ce champ est requis"),
+  body: yup.string().required("Ce champ est requis"),
 });

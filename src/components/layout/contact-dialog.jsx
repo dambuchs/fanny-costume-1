@@ -22,7 +22,7 @@ const ContactDialog = () => {
   const handleOnSubmit = (values) => {
     sendEmail(values);
     toast({
-      title: "Message has been sent successfully",
+      title: "Le message a été envoyé avec succès",
     });
     setIsOpen(false);
   };
@@ -31,14 +31,14 @@ const ContactDialog = () => {
     <Dialog open={IsOpen} onOpenChange={setIsOpen}>
       <DialogTrigger asChild>
         <Button size="lg">
-          Contact Me <FaArrowRight className="ml-2" size="14px" />
+          Contactez-moi <FaArrowRight className="ml-2" size="14px" />
         </Button>
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
-          <DialogTitle>Contact Me</DialogTitle>
+          <DialogTitle>Contactez-moi</DialogTitle>
           <DialogDescription>
-            Let&apos;s get in touch by sending me a message.
+            Écrivez-moi un message pour que nous puissions échanger.
           </DialogDescription>
         </DialogHeader>
         <ContactForm handleOnSubmit={handleOnSubmit} />

@@ -14,15 +14,15 @@ export default function Home() {
     try {
       sendEmail(values);
       toast({
-        title: "Message Sent!",
-        description: "Thank you for reaching out. I'll get back to you soon.",
+        title: "Message envoyé !",
+        description: "Merci de m'avoir contactée. Je vous répondrai bientôt.",
       });
       resetForm();
     } catch (error) {
       toast({
         variant: "destructive",
-        title: "Error",
-        description: "Something went wrong. Please try again.",
+        title: "Erreur",
+        description: "Une erreur est survenue. Veuillez réessayer.",
       });
     }
   };
@@ -34,8 +34,8 @@ export default function Home() {
       <InstagramFeed />
       <section id="contact" className="mx-auto max-w-2xl py-16">
         <div className="mb-8 text-center">
-          <h2 className="text-3xl font-bold uppercase tracking-wider">Get in Touch</h2>
-          <p className="mt-2 text-muted-foreground">Let's create something beautiful together.</p>
+          <h2 className="text-3xl font-bold uppercase tracking-wider">Contactez-moi</h2>
+          <p className="mt-2 text-muted-foreground">Créons quelque chose de beau ensemble.</p>
         </div>
         <div className="rounded-xl border bg-card p-8 shadow-sm">
             <ContactForm handleOnSubmit={handleOnSubmit} />
