@@ -10,28 +10,25 @@ import { inter, roboto, ceraRoundPro } from "@/utils/fonts";
 
 export const metadata = {
   title: {
-    default: "Ralph Ortiz",
-    template: "Ralph Ortiz | %s",
+    default: "Fanny Costume",
+    template: "Fanny Costume | %s",
   },
   description:
-    "Frontend-focused full stack engineer with a passion for building beautiful, functional, and accessible websites and applications.",
+    "Theater costume designer specializing in historical accuracy and avant-garde theatrical costume design.",
   keywords: [
-    "Next.js",
-    "React",
-    "JavaScript",
-    "TypeScript",
-    "Frontend",
-    "Full Stack",
-    "Software Engineer",
-    "Web Developer",
+    "Costume Design",
+    "Theater",
+    "Fabrication",
+    "Historical Costume",
+    "Stage Design",
   ],
   authors: [
     {
-      name: "Ralph Ortiz",
-      url: "https://github.com/ralph-ortiz",
+      name: "Fanny Costume",
+      url: "https://fanny-costume.com",
     },
   ],
-  creator: "Ralph Ortiz",
+  creator: "Fanny Costume",
 };
 
 export default function RootLayout({ children }) {
@@ -52,7 +49,7 @@ export default function RootLayout({ children }) {
   //   return () => window.removeEventListener("keydown", handleKeyDown);
   // }, [toggle]);
   return (
-    <html lang="en" className="dark">
+    <html lang="en">
       <body className={`${inter} ${roboto} ${ceraRoundPro}`}>
         <div className="grid min-h-[100dvh] grid-rows-[auto_1fr_auto]">
           <NavigationBar />
