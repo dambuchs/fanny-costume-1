@@ -1,7 +1,6 @@
 "use client";
 
 import React from "react";
-import { FaArrowDown, FaScissors, FaPenRuler } from "react-icons/fa6";
 import { Button } from "@/components/ui/button";
 import ContactDialog from "@/components/layout/contact-dialog";
 import StitchLine from "@/components/ui/stitch-line";
@@ -9,13 +8,6 @@ import StitchLine from "@/components/ui/stitch-line";
 const Hero = () => {
   return (
     <section id="hero" className="flex min-h-[85vh] flex-col justify-center py-10 relative overflow-hidden">
-      {/* Background Elements */}
-      <div className="absolute right-0 top-20 -z-10 opacity-5">
-         <FaScissors size={300} />
-      </div>
-      <div className="absolute left-10 bottom-20 -z-10 opacity-5 rotate-45">
-         <FaPenRuler size={200} />
-      </div>
 
       <div className="mx-auto flex flex-col items-center gap-12 text-center md:w-[1100px] md:flex-row md:text-start">
         
